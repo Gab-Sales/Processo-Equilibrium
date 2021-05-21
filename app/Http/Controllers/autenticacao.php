@@ -9,7 +9,9 @@ class autenticacao extends Controller
     public function login(Request $Req)
     { 
         //print_r(dd($Req->all()));
-        return redirect()->route('home');
+        session(['logado'=>true]);
+        //print_r(session()->all());
+        return redirect('home');
     }
 }
 
