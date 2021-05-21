@@ -13,6 +13,15 @@ class autenticacao extends Controller
         //print_r(session()->all());
         return redirect('home');
     }
+
+    public function logout()
+    { 
+        //print_r(dd($Req->all()));
+        session(['logado'=>false]);
+        //print_r(session()->all());
+        return redirect('/');
+    }
+
 }
 
 

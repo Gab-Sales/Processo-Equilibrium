@@ -13,16 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', function () {return view('welcome');});
 
+// Funções de login
 Route::post('/login','App\Http\Controllers\autenticacao@login');
 
-Route::get('/home', function () {
-    return View::make('administrador/index');
-});
+// Administrador
+Route::group(['middleware'=>['auth.login']],function(){
+    // Sair
+    Route::get('/logout','App\Http\Controllers\autenticacao@logout');
 
-Route::get('/funcionarios', function () {
-    return View::make('administrador/funcionariosGrid');
+    //Navegação simples
+    Route::get('/home', function () {
+        return View::make('administrador/index');
+    });
+
+    Route::get('/funcionarios', function () {
+        return View::make('administrador/funcionariosGrid');
+    });
+
+    Route::post('/inserir','App\Http\Controllers\administrador@inserir');
+    
+    // Funções Admin
+    Route::post('/cadastrar','App\Http\Controllers\administrador@cadastrar');
 });
