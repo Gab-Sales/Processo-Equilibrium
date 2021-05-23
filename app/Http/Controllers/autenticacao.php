@@ -3,22 +3,26 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Session;
 
 class autenticacao extends Controller
 {
     public function login(Request $Req)
     { 
-        //print_r(dd($Req->all()));
-        session(['logado'=>true]);
-        //print_r(session()->all());
-        return redirect('home');
+        if(strtolower ($Req->input('username')) == 'admin' && $Req->input('password') == 123){
+            session(['logado'=>true]);
+            return redirect('home');
+        }
+        else{
+            Session::flash('msg', 'Usuário ou Senha invalidos.');
+            Session::flash('class', 'alert alert-danger');
+            return redirect('/');
+        }
     }
 
     public function logout()
     { 
-        //print_r(dd($Req->all()));
         session(['logado'=>false]);
-        //print_r(session()->all());
         return redirect('/');
     }
 

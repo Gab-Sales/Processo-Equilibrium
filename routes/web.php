@@ -28,12 +28,13 @@ Route::group(['middleware'=>['auth.login']],function(){
         return View::make('administrador/index');
     });
 
-    Route::get('/funcionarios', function () {
-        return View::make('administrador/funcionariosGrid');
-    });
+    Route::get('/funcionarios','App\Http\Controllers\administrador@getFuncionarios');
+    //     return View::make('administrador/funcionariosGrid');
+    // });
 
-    Route::post('/inserir','App\Http\Controllers\administrador@inserir');
+    Route::get('/inserir','App\Http\Controllers\administrador@inserir');
     
     // Funções Admin
     Route::post('/cadastrar','App\Http\Controllers\administrador@cadastrar');
+    Route::get('/delete/{Codigo}','App\Http\Controllers\administrador@excluir');
 });

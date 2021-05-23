@@ -29,15 +29,18 @@
     button.custom-but:hover {
         color:gray!important;
     }
+    .bg-dark{
+        background-color:rebeccapurple!important;
+    }
   </style>
-  <body class="vh-100 ">
+  <body class="vh-100 "  style="background: rgb(251,238,255);">
     <div class="container-fluid p-0">
         <nav class="navbar navbar-light bg-dark">                
             <?php if(session('logado')==1){ ?>
                 <div class="container-fluid d-flex"> 
                     <button class="custom-but" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" ><i class="fas fa-bars"></i></button>
                     <div align="center"><a class="navbar-brand text-white" href="/home">&nbsp;Projeto X</a></div>
-                    <a class="btn btn-primary" href="logout">Sair</a>
+                    <a class="btn btn-light" style="min-width:100;color:rebeccapurple" href="logout"><b>Sair</b> <i class="fas fa-sign-out-alt"></i></a>
                 </div>
             <?php } else { ?>
                 <div class="container-fluid d-flex justify-content-center"> 
