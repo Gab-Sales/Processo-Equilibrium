@@ -1,4 +1,5 @@
 ## Instruções para executar o projeto localmente
+<h1>Atenção: o login e senha são:<br>login:admin<br>senha:123</h1>
 
 ## Step one
 com o composer devidamente instalado
