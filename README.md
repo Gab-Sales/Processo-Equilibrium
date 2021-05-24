@@ -1,24 +1,24 @@
-##Instruções para executar o projeto localmente
+## Instruções para executar o projeto localmente
 
-##Step one
+## Step one
 com o composer devidamente instalado
 executar este comando no terminal:
 composer install --no-scripts
 
-##Step two
+## Step two
 Copie o arquivo .env.example
 copiando e colando ou executando este comando no terminal:
 cp .env.example .env
 
-##Step three
+## Step three
 Crie uma nova chave para a aplicação
 php artisan key:generate
 
-##Step four
+## Step four
 criar o banco onde sera executado as migrations (por padrão é recomendavel que o apelido do banco seja "laravel")
 executar as migrations:
 php artisan migrate
 
-##Step five
+## Step five
 execute o comando no seu terminal:
 php artisan serve
