@@ -13,6 +13,7 @@
                                 @endif
                             <!-- <div class="card card-block p-4 " style="background:linear-gradient(180deg, rgba(99,53,162,1) 11%, rgba(104,25,156,1) 41%, rgba(36,2,25,1) 88%);border:none!important"> -->
                                 <h4>Gerenciamento Interno</h4>
+                                <span align="left">Login: admin<br>Senha: 123</span>
                                 <div align="left" class="my-3">
                                     <label>Usuário</label>
                                     <input type="text" name="username" class="form-control">

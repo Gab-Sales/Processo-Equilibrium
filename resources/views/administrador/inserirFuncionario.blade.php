@@ -5,7 +5,7 @@
 let tel ={{isset($ret) && count($ret->contatos) > 0 ? count($ret->contatos) : 0 }}
 const newTel = () => {
     tel=tel+1
-    $('#telDiv').append('<div class="col-12"><label for="Telefone"  class="form-label">Telefone</label><input name="Telefone['+tel+'][cod]" value="0" hidden><input type="text" name="Telefone['+tel+'][tel]" initial class="form-control " id="Telefone"></div>')
+    $('#telDiv').append('<div class="col-12"><label for="Telefone"  class="form-label">Telefone</label><input name="Telefone['+tel+'][cod]" value="0" hidden><input type="text" onkeypress="return onlynumber();" maxlength="15" name="Telefone['+tel+'][tel]" initial class="form-control " id="Telefone"></div>')
 }
 function onlynumber(evt) {
    var theEvent = evt || window.event;
@@ -66,7 +66,7 @@ function onlynumber(evt) {
                 <div class="col-12">
                     <label for="Telefone"  class="form-label">Telefone {{$key+1}}</label>
                     <input name="Telefone[{{$key}}][cod]" value="{{$val->Codigo}}" hidden>
-                    <input type="text" name="Telefone[{{$key}}][tel]" initial class="form-control " id="Telefone" value="{{$val->Telefone}}">
+                    <input type="text" name="Telefone[{{$key}}][tel]" onkeypress="return onlynumber();" maxlength="15" class="form-control " id="Telefone" value="{{$val->Telefone}}">
                 </div>
             @endforeach
         @endif
