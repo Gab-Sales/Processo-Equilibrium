@@ -11,7 +11,7 @@ copiando e colando ou executando este comando no terminal:
 cp .env.example .env
 
 ## Step three
-Crie uma nova chave para a aplicação
+Crie uma nova chave para a aplicação usando o comando:
 php artisan key:generate
 
 ## Step four
