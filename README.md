@@ -27,7 +27,7 @@ php artisan key:generate
 ```
 
 ### 4º Passo
-Crie o banco onde sera executado as migrations 
+Crie o banco onde sera executado as migrations, 
 **por padrão é recomendavel que o apelido do banco seja "laravel"**
 executar as migrations:
 ```bash
