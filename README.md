@@ -1,25 +1,46 @@
-## Instruções para executar o projeto localmente
-<h3>Atenção o login e senha são:<br>login: admin<br>senha: 123</h3>
+# Equilibrium Web
 
-## Step one
-com o composer devidamente instalado
-executar este comando no terminal:
-composer install --no-scripts
+Descrição básica do que foi feito
+Ex:
+Esse é um painel administrativo no qual é possível cadastrar usuários e editá-lós.
+Se possível, colocar prints também (**ajuda muito**)
 
-## Step two
-Copie o arquivo .env.example
-copiando e colando ou executando este comando no terminal:
+## Credênciais de acesso
+ * login: admin
+ * senha: 123
+
+## Passos para rodar o projeto
+### 1º Passo
+
+Com o **composer** devidamente **instalado**
+execute este comando no terminal:
+```bash
+composer install --no-scripts* 
+```
+
+### 2º Passo
+Copie o arquivo .env.example e renomeie para .env
+Para fazer isso, execute este comando no terminal:
+```bash
 cp .env.example .env
+```
 
-## Step three
+### 3º Passo
 Crie uma nova chave para a aplicação usando o comando:
+```bash
 php artisan key:generate
+```
 
-## Step four
-criar o banco onde sera executado as migrations (por padrão é recomendavel que o apelido do banco seja "laravel")
+### 4º Passo
+Crie o banco onde sera executado as migrations 
+**por padrão é recomendavel que o apelido do banco seja "laravel"**
 executar as migrations:
+```bash
 php artisan migrate
+```
 
-## Step five
-execute o comando no seu terminal:
+### 5º Passo
+Para rodar a aplicação, num servidor php local, execute o comando:
+```bash
 php artisan serve
+```
